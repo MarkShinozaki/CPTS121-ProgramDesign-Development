@@ -1,3 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
+/*
+Name: Mark Shinozaki
+Class: CptS 121, Fall 2020
+Lab Assignment: Programming Assignment 2 
+Date: 09/18/2020
+Description: A Modualar Approach to the Equation Evaluator 
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#define PI 3.14
+#include <stdio.h>
+#include <math.h>
+
 int main(void)
 {
     char The_char;
