@@ -1,4 +1,10 @@
-// function declerations
+#define _CRT_SECURE_NO_WARNINGS
+
+#define PI 3.14
+#include <stdio.h>
+#include <math.h>
+
+
 char character_encryption(char plaintext_character, int shift_int);
 int calculate_series_resistance(int r1, int r2, int r3);
 double general_equation(int a, double x, double y, double z);
