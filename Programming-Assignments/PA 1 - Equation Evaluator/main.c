@@ -14,8 +14,8 @@ Description: Equation Evaluator
 int main(void)
 {
 	// PART 1 - Total resistance series
-	printf("Total Resistance Series - Part 1\n");
-	int R1 = 0, R2 = 0, R3 = 0, total1;
+	printf("----------------------------Total Resistance Series - Part 1----------------------------\n");
+	int R1 = 0,R2 = 0,R3 = 0,total1 = 0;
 	printf("\nPlease enter the values of 3 resistors in series(separated by a space): ");
 	scanf("%d %d %d", &R1, &R2, &R3);
 	total1 = (R1 + R2 + R3);
@@ -39,16 +39,16 @@ int main(void)
 	int length, width, height, volume;
 	printf("\nType the Length, Width & Height with a space inbetween each number: ");
 	scanf("%d %d %d", &length, &width, &height);
-	volume = (length * width * height)/3;
-	printf("\n The volume of the pyramid is %d \n ", volume);
+	volume = (length * width * height) / 3;
+	printf("\n The volume of the pyramid with %d length, %d width and %d height, is %d cubic units \n ",length, width,height, volume);
 
 	// PART 4 - TOTAL PARALLEL RESISTANCE
 	printf("\n----------------------------Total Parallel Resistance - Part 4-------------------\n");
 	double R_1, R_2, R_3, parallel_resistance;
 	printf("\nPlease enter the 3 integer values in the parallel resistance series(separated by a space): ");
 	scanf("%lf %lf %lf", &R_1, &R_2, &R_3);
-	printf("\n The three values are R1 = %lf  R2 = %lf R3 = %lf \n",R_1, R_2, R_3);
-	parallel_resistance = 1 / (( 1 / R_1) + (1 / R_2) + (1 / R_3));
+	printf("\n The three values are R1 = %lf  R2 = %lf R3 = %lf \n", R_1, R_2, R_3);
+	parallel_resistance = 1 / ((1 / R_1) + (1 / R_2) + (1 / R_3));
 	printf("\n The Total Parallel Resistance: 1 / ( 1 / R1 + 1 / R2 + 1 / R3) = %lf + %lf + %lf = %lf \n", R_1, R_2, R_3, parallel_resistance);
 
 	// PART 5 - CHARACTER ENCODING
@@ -57,23 +57,22 @@ int main(void)
 	printf("\n----------------------------Character Encoding - Part 5---------------------------------\n");
 	printf("\nCharacter encoding: encoded_character = (plaintext_character - 'A') + 'a' - shift\n");
 	printf("\nEnter a plaintext_character: ");
-	scanf(" %c", &plaintext_character);
+	scanf("%c", &plaintext_character);
 	printf("\nEnter the value of shift(here shift is an integer): ");
 	scanf("%d", &shift);
 	encoded_character = (plaintext_character - 'A') + 'a' - shift;
-	printf("\nEncoded character = %c \n ", encoded_character);
+	printf("\nEncoded character = (%c - 'A') + 'a' - %d = %c \n ",plaintext_character,shift, encoded_character);
 
 	// PART 6 - DISTANCE BETWEEN TWO POINTS
-	float x1, x2, y1, y2,distance;
+	float x1, x2, y1, y2, distance;
 	printf("\n----------------------------Distance Between Two Points - Part 6--------------------------\n");
 	printf("\nWith this program you will be entering two points each point in used to find the distance\n");
 	printf("\nfirst point(Enter both numbers): ");
-	scanf("%f %f", &x1, &y1);
+	scanf("%f%f", &x1, &y1);
 	printf("\nSecond point(Enter both numbers): ");
-	scanf("%f %f", &x2, &y2);
+	scanf("%f%f", &x2, &y2);
 	distance = sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
-	printf("\ndistance between two points = %f \n ", distance);
-
+	printf("\ndistance between these two points (%lf,%lf) & (%lf, %lf) is %f \n ",x1,x2,y1,y2, distance);
 
 	// PART 7 - GENERAL EQUATION
 	float x, y, z;
@@ -90,9 +89,9 @@ int main(void)
 	printf("\n y value:");
 	scanf("%d", &y);
 	//general equation with type casting
-	y = y / (float)(3 / 17) - (z + x) / (a % 2) + PI;
-	//print the value of y
-	printf("\n y = %f \n ", y);
+	y = (float) y / ((float)3 / (float) 17) - (float)z + (float)x / ((float)(a % 2) + PI);
+	
+	printf("\n y = %lf \n ", y);
 
 
 	return 0;
